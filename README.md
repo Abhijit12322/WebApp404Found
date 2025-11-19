@@ -1,40 +1,49 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WildGuard AI
 
-## Getting Started
+WildGuard AI is a lightweight, full‑stack wildlife monitoring system built with **Next.js**, **Flask**, and **Supabase**. It enables users to upload media, run ML-based detection, and view processed results through a clean, responsive interface.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Secure authentication via Supabase Auth
+* Direct uploads to Supabase Storage
+* Flask backend with integrated ML model
+* Annotated output videos/images returned to users
+* Detection history + danger alerts stored in Supabase
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗️ Architecture
 
-## Learn More
+**Frontend (Next.js):** Uploads media, handles auth, displays results.
+**Backend (Flask + ML):** Downloads file, runs inference, uploads processed output.
+**Supabase:** Auth, database, and file storage.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🗄️ Database Overview
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**detections:** ML outputs (media URLs, type, scores, JSON).
+**danger_alerts:** Threat alerts with levels + read state.
+**users:** App user profiles linked to `auth.users`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# hackathon
->>>>>>> a3b62e7c1d3b781d55549c3d57d04aa8b292c9b7
+---
+
+
+## 🔒 Security
+
+* Never expose Supabase service key.
+* Use RLS for user‑scoped data access.
+
+---
+
+## 📄 License
+
+MIT (or your choice).
+
+---
+
+WildGuard AI — fast, simple, and intelligent wildlife detection.
