@@ -73,7 +73,7 @@ export default function BBoxViewer({ url, type, detections }: BBoxViewerProps) {
                                 }}
                             >
                                 {/* Label & Accuracy Badge */}
-                                <div className="absolute -top-9 left-[-2px] flex flex-col items-start">
+                                <div className="absolute -top-9 left-0.5 flex flex-col items-start">
                                     <span className={`text-white text-[10px] font-bold px-2 py-1 rounded-t-md flex items-center gap-1 uppercase tracking-wider ${d.dangerous ? 'bg-red-600' : 'bg-emerald-600'
                                         }`}>
                                         {d.dangerous && <AlertCircle className="w-3 h-3" />}
