@@ -16,9 +16,9 @@ WildGuard AI is a lightweight, full‑stack wildlife monitoring system built wit
 
 ## 🏗️ Architecture
 
-**Frontend (Next.js):** Uploads media, handles auth, displays results.
-**Backend (Flask + ML):** Downloads file, runs inference, uploads processed output.
-**Supabase:** Auth, database, and file storage.
+* **Frontend (Next.js):** Uploads media, handles auth, displays results.
+* **Backend (Flask + ML):** Downloads file, runs inference, uploads processed output.
+* **Supabase:** Auth, database, and file storage.
 
 ---
 
@@ -26,9 +26,9 @@ WildGuard AI is a lightweight, full‑stack wildlife monitoring system built wit
 
 ## 🗄️ Database Overview
 
-**detections:** ML outputs (media URLs, type, scores, JSON).
-**danger_alerts:** Threat alerts with levels + read state.
-**users:** App user profiles linked to `auth.users`.
+* **detections:** ML outputs (media URLs, type, scores, JSON).
+* **danger_alerts:** Threat alerts with levels + read state.
+* **users:** App user profiles linked to `auth.users`.
 
 ---
 
